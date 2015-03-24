@@ -1,2 +1,3 @@
-# haskell-service
-A dockerized Haskell web service
+# Scotty + Docker
+
+A dockerized Haskell web service.
