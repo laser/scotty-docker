@@ -4,7 +4,7 @@ import           Data.Monoid                          (mconcat)
 import           Network.Wai.Middleware.RequestLogger (logStdoutDev)
 import           Web.Scotty
 
-main = scotty 3000 $ do
+main = scotty 8080 $ do
   middleware logStdoutDev
   get "/:word" $ do
     beam <- param "word"
