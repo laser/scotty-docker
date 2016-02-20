@@ -24,6 +24,4 @@ ENTRYPOINT ["scotty-docker"]
 
 
 ###############
-
-
-docker run -d -p 82:8080 --entrypoint=/bin/sh --link cloudwatchlogs:cloudwatchlogs laser/scotty-docker -c 'scotty-docker 2>&1 | /usr/bin/logger -t httpd -p local6.info -n cloudwatchlogs -P 514'
+docker run -d -p 82:8080 --entrypoint=/bin/sh --link cloudwatchlogs:cloudwatchlogs laser/scotty-docker -c 'scotty-docker 2>&1 | /usr/bin/logger -t scotty-docker -p local6.info -n cloudwatchlogs -P 514'
